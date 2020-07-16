@@ -1,2 +1,2 @@
-# machine-learning-template
-HighTechU Project Hub - template for machine learning project with Python
+# data-mining-template
+HighTechU Project Hub - template for data mining project with Python
