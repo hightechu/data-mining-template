@@ -4,18 +4,29 @@ import numpy as np
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.model_selection import train_test_split
 from sklearn import metrics
+from tkinter import *
 
-def main():
-    movie_data = pd.read_csv('../movie_descriptions.csv', header=0)
-    movie_label = pd.read_csv('../movie_genres.csv', header=0)
-    movie_label=movie_label.values.ravel()
+movie_data = pd.read_csv('../movie_descriptions.csv', header=0)
+movie_label = pd.read_csv('../movie_genres.csv', header=0)
+movie_label=movie_label.values.ravel()
 
-    sentence = "Alice was in the kingdom with her wicked stepmother"
+clf = MultinomialNB(alpha = 0.5, fit_prior = True)
+clf.fit(movie_data, movie_label)
 
-    clf = MultinomialNB(alpha = 0.5, fit_prior = True)
-    clf.fit(movie_data, movie_label)
-    genre_pred = clf.predict(DTMdescriptions(sentence, movie_data.columns.values).DTM())
-    print(genre_pred[0])
+root = Tk()
+root.title("Sci-Fi or Fantasy AI")
+instructions = Label(root, text = "Enter a movie description and I will guess if it \
+is Sci-Fi or Fantasy")
+instructions.pack()
+e = Entry(root, width = 100)
+e.pack()
 
-if __name__ == '__main__':
-    main()
+def click():
+    genre_pred = clf.predict(DTMdescriptions(e.get(), movie_data.columns.values).DTM())
+    genre = Label(root, text = "I think \"" + e.get() + "\" is " + genre_pred[0])
+    genre.pack()
+
+button = Button(root, text="Enter", command = click)
+button.pack()
+
+root.mainloop()

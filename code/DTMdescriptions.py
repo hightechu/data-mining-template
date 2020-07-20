@@ -55,9 +55,8 @@ class DTMdescriptions:
         for word in words:
             try:
                 index = self.fature_values.index(word)
-                present.append(word)
+                DTM[index] +=1
             except Exception as e:
                 continue
 
-            DTM[index] +=1
         return np.array(DTM).reshape(1, -1)
