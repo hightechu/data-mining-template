@@ -16,18 +16,18 @@ def main():
     clf = input("Choose a classifier (type 1,2, or 3 and hit enter): \n(1)Naive Bayes \n(2)Support Vector Machine \n(3)Neural Network \n")
 
     if clf == '1':
-        print("\n Naive Bayes")
+        print(Naive Bayes")
         clf = MultinomialNB(alpha = 0.5, fit_prior = True)
         classifcation_acc(clf,X_train, X_test, y_train, y_test)
         single_class(clf,X_train, X_test, y_train, y_test)
 
     elif clf == '2':
-        print("\n SVM")
+        print("SVM")
         clf = SVC(C = 0.8)
         classifcation_acc(clf,X_train, X_test, y_train, y_test)
 
     elif clf == '3':
-        print("\n Neural Network")
+        print("Neural Network")
         clf = MLPClassifier(random_state=1, max_iter=300)
         classifcation_acc(clf,X_train, X_test, y_train, y_test)
 
