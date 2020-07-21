@@ -53,21 +53,21 @@ jobs:
             - name: Create Issue From File
               uses: peter-evans/create-issue-from-file@v2.3.1
               with:
-                title: Finding the Best Classification Strategy: part 1
+                title: Finding the Best Classification Strategy part 1
                 content-filepath: ./Issues/naive_bayes.md
                 assignees: cairosanders, ${{github.actor}}
 
             - name: Create Issue From File
               uses: peter-evans/create-issue-from-file@v2.3.1
               with:
-                title: Finding the Best Classification Strategy: part 2
+                title: Finding the Best Classification Strategy part 2
                 content-filepath: ./Issues/SVM.md
                 assignees: cairosanders, ${{github.actor}}
 
             - name: Create Issue From File
               uses: peter-evans/create-issue-from-file@v2.3.1
               with:
-                title: Finding the Best Classification Strategy: part 3 (Final Part)
+                title: Finding the Best Classification Strategy part 3 (Final Part)
                 content-filepath: ./Issues/nn.md
                 assignees: cairosanders, ${{github.actor}}
 
@@ -81,6 +81,6 @@ jobs:
             - name: Create Issue From File
               uses: peter-evans/create-issue-from-file@v2.3.1
               with:
-                title: Bonus: Spicing Up the User Interface
+                title: (Bonus) Spicing Up the User Interface
                 content-filepath: ./Issues/bonus.md
                 assignees: cairosanders, ${{github.actor}}
