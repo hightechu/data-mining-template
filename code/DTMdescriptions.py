@@ -20,10 +20,10 @@ class DTMdescriptions:
         else:
             ssl._create_default_https_context = _create_unverified_https_context
 
-        # nltk.download('punkt')
-        # nltk.download('averaged_perceptron_tagger')
-        # nltk.download('stopwords')
-        # nltk.download('wordnet')
+        nltk.download('punkt')
+        nltk.download('averaged_perceptron_tagger')
+        nltk.download('stopwords')
+        nltk.download('wordnet')
     # find the part of speech a word belongs to, this is used in lemmaSentence
     # Can be adjective, noun, verb, or adverb
     def get_wordnet_pos(word):
