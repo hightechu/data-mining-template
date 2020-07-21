@@ -18,12 +18,13 @@ root.title("Sci-Fi or Fantasy AI")
 instructions = Label(root, text = "Enter a movie description and I will guess if it \
 is Sci-Fi or Fantasy")
 instructions.pack()
-e = Entry(root, width = 100)
-e.pack()
+input = Entry(root, width = 100)
+input.pack()
 
 def click():
-    genre_pred = clf.predict(DTMdescriptions(e.get(), movie_data.columns.values).DTM())
-    genre = Label(root, text = "I think \"" + e.get() + "\" is " + genre_pred[0])
+    description = DTMdescriptions(input.get(), movie_data.columns.values).DTM()
+    genre_pred = clf.predict(description)
+    genre = Label(root, text = "I think \"" + input.get() + "\" is " + genre_pred[0])
     genre.pack()
 
 button = Button(root, text="Enter", command = click)
