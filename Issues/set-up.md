@@ -35,5 +35,3 @@ Now navigate into your project folder on command line and install the required p
 ![save as movie_descriptions.csv](https://user-images.githubusercontent.com/45152371/88113567-df333800-cb66-11ea-96f2-c44d9f9c34d1.png)
  
 - Create a [pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request)
-
-You should be good to move onto the next issue and start coding! If you have any questions, comment on this issue and your mentor will be notified.
