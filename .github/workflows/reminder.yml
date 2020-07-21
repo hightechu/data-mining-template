@@ -1,0 +1,43 @@
+
+# This is a basic workflow to help you get started with Actions
+
+name: Reminder
+
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the master branch
+on:
+  schedule:
+  - cron: '0 6 * * 5'
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+            # Get the target repository and branch
+            - name: Get the target repository and branch
+              id: vars
+              run: |
+                repository=${{ github.event.client_payload.slash_command.repository }}
+                if [[ -z "$repository" ]]; then repository=${{ github.repository }}; fi
+                echo ::set-output name=repository::$repository
+                branch=${{ github.event.client_payload.slash_command.branch }}
+                if [[ -z "$branch" ]]; then branch="master"; fi
+                echo ::set-output name=branch::$branch
+                # Checkout the branch to test
+            - uses: actions/checkout@v2
+              with:
+               repository: ${{ steps.vars.outputs.repository }}
+               ref: ${{ steps.vars.outputs.branch }}
+
+
+            - name: Create Issue From File
+              uses: peter-evans/create-issue-from-file@v2.3.1
+              with:
+                title: Weekly reminder
+                content-filepath: ./Issues/weekly_reminder.md
+                assignees: cairosanders, ${{github.actor}}
