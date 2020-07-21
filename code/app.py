@@ -6,12 +6,10 @@ from sklearn.model_selection import train_test_split
 from sklearn import metrics
 from tkinter import *
 
-movie_data = pd.read_csv('../movie_descriptions.csv', header=0)
-movie_label = pd.read_csv('../movie_genres.csv', header=0)
-movie_label=movie_label.values.ravel()
+# import csvs here
 
-clf = MultinomialNB(alpha = 0.5, fit_prior = True)
-clf.fit(movie_data, movie_label)
+# your code here
+# your code here
 
 root = Tk()
 root.title("Sci-Fi or Fantasy AI")
@@ -22,8 +20,8 @@ input = Entry(root, width = 100)
 input.pack()
 
 def click():
-    description = DTMdescriptions(input.get(), movie_data.columns.values).DTM()
-    genre_pred = clf.predict(description)
+    # your code here
+    # your code here 
     genre = Label(root, text = "I think \"" + input.get() + "\" is " + genre_pred[0])
     genre.pack()
 

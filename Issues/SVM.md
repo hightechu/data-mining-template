@@ -15,7 +15,7 @@ It's that time again - time to create another awesome classifier!
 ```
 - [ ] Run the program in command line to check for errors and see your first accuracy!. Make sure you're in the code folder of your project directory and run:
 ```sh
-> python3 code/test_classifiers.py
+> python3 test_classifiers.py
 ```
 As you can see, this classifier has many possible parameters and if you got to [sklearn documentation](https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html) you can add even more.
 But to start try different values for these parameters and try to achieve the highest accuracy you can
