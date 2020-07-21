@@ -1,0 +1,37 @@
+
+# This Workflow is to create issues for the project-hub MVP
+name: Make Issues
+
+# Controls when the action will run. Triggers the workflow on push but only for the master branch
+on:
+ issues:
+    types: [pinned]
+
+
+jobs:
+    createIssueFromFile:
+        runs-on: ubuntu-latest
+        steps:
+            # Get the target repository and branch
+            - name: Get the target repository and branch
+              id: vars
+              run: |
+                repository=${{ github.event.client_payload.slash_command.repository }}
+                if [[ -z "$repository" ]]; then repository=${{ github.repository }}; fi
+                echo ::set-output name=repository::$repository
+                branch=${{ github.event.client_payload.slash_command.branch }}
+                if [[ -z "$branch" ]]; then branch="master"; fi
+                echo ::set-output name=branch::$branch
+                # Checkout the branch to test
+            - uses: actions/checkout@v2
+              with:
+               repository: ${{ steps.vars.outputs.repository }}
+               ref: ${{ steps.vars.outputs.branch }}
+
+
+            - name: Create Issue From File
+              uses: peter-evans/create-issue-from-file@v2.3.1
+              with:
+                title: Introduction to GitHub
+                content-filepath: ./Issues/Introduction-to-GitHub.md
+                assignees: cairosanders, ${{github.actor}}
