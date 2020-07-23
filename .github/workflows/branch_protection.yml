@@ -12,8 +12,8 @@ jobs:
     createIssueFromFile:
         runs-on: ubuntu-latest
         steps:
-        - uses: actions/checkout@v1
-        - uses: infamous-riddles/branch-guardian@v1
+        - name: Branch Guardian 
+          uses: infamous-riddles/branch-guardian@v1
           with: 
             PERSONAL-ACCESS-TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
             BASE-BRANCH-PATTERN: 'master'
