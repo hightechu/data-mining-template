@@ -1,0 +1,21 @@
+
+# This Workflow is to create branch protection rules for the master branch
+name: Create Branch Protection Rules
+
+# Action runs on issue pin
+on:
+ issues:
+    types: [pinned]
+
+
+jobs:
+    createIssueFromFile:
+        runs-on: ubuntu-latest
+        steps:
+        - uses: actions/checkout@v1
+        - uses: ./
+          with: 
+            PERSONAL-ACCESS-TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+            BASE-BRANCH-PATTERN: 'master'
+            REQUIRED-NUMBER-OF-REVIEWERS: 1
+            REQUIRE-REVIEW-FROM-CODEOWNERS: 'true'
