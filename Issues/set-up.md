@@ -1,15 +1,28 @@
 ## Setting up your development environment
 You're almost ready to start coding, but first you have to set up your computer so  you can test your program while you code.
+### Download git and connect to your GitHub account
+- If you don't already have git on your computer you can download it [here](https://git-scm.com/downloads)
+- Connect to GitHub on
+   - [Windows](https://www.pluralsight.com/guides/using-git-and-github-on-windows)
+   - [Mac](https://kbroman.org/github_tutorial/pages/first_time.html)
+   - [Linux](https://www.howtoforge.com/tutorial/install-git-and-github-on-ubuntu/#-configuring-github)
 ### Adding the Project to your Local Machine
 You need to add this repository to your computer to make changes and edit it in the development environment. Go ahead and [clone](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository) this repository on your computer. Make sure you're in a directory that you'll remember/ is easy to access. If you're not sure, your Desktop is a good go-to.
 ![cloning-repo](https://user-images.githubusercontent.com/45152371/86035053-800f5700-b9f0-11ea-9b7a-e2201286067b.GIF)
+   
+Open your **Command Line** (probably called Terminal or Command Prompt)
 
-Open your **terminal**
 In command line:
 ```sh
 >cd desktop
 >git clone <copied link here>
 ```
+example:
+```sh
+cd desktop
+git clone https://github.com/hightechu/project-template.git
+```
+
 ## Installing Requirements
 If you don't already, make sure you [install python3](https://www.python.org/downloads/)
 
