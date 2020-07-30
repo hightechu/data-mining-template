@@ -1,0 +1,7 @@
+{
+  "name": "Sci-fi or Fantasy",
+  "description": "A user can input a description or title for a movie and the app will classify it as Sci-Fi or Fantasy",
+  "repository": "https://github.com/hightechu/hightechu-project-scifi-or-fantasy",
+  "logo": "https://user-images.githubusercontent.com/45152371/87735359-25188680-c78a-11ea-83bf-fb11884686bf.png",
+  "keywords": ["classification", "machine-learning", "data"]
+}
