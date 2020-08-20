@@ -1,5 +1,4 @@
-mentor: 
-  - hightechu-ca
+mentor: ["hightechu-ca"]
 name: Sci-Fi or Fantasy?
 difficulty: "HARD"
 tags:
