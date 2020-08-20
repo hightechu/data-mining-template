@@ -16,7 +16,7 @@ For this assignment, students will use machine learning to create a program that
 ## Getting Started
 1. To start head to the **issues** tap at the top of this repository
 2. Start at the very **bottom** of the Issues (Introduction to GitHub) and follow the instructions
-3. If you have any questions tag your mentor @cairosanders
+3. If you have any questions tag your mentor @cairosanders in a comment on the issue or in a pull request
 4. When you're done, close the issue and move onto the second issue (Setting up your Development Environment)
 5. Continue like this until you have closed all issues!
 
