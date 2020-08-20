@@ -19,3 +19,10 @@ For this assignment, students will use machine learning to create a program that
 3. If you have any questions tag your mentor @cairosanders
 4. When you're done, close the issue and move onto the second issue (Setting up your Development Environment)
 5. Continue like this until you have closed all issues!
+
+## Alternative Workflow
+If you want to complete the project in related chuncks, you can work through milestones
+1. To start head to the **issues** tap at the top of this repository
+2. Click on **milestones**
+3. Start at the bottom of the mielstones with "Getting started", and completed the issues from the bottom up
+4. Move onto the next milstone
